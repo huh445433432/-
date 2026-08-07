@@ -16,7 +16,7 @@ from vk_api.exceptions import ApiError
 app = Flask(__name__)
 
 TOKEN = os.environ.get('VK_TOKEN', '')
-GROUP_IDS = os.environ.get('GROUP_IDS', '-123456789,-987654321').split(',')
+GROUP_IDS = os.environ.get('GROUP_IDS', '-165412523').split(',')
 INTERVAL_HOURS = int(os.environ.get('INTERVAL_HOURS', '5'))
 PHOTO_DIR = os.path.join(os.path.dirname(__file__), 'photos')
 
