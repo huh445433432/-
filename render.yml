@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: vk-auto-poster
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: VK_TOKEN
+        sync: false  # Будет задан вручную
+      - key: GROUP_IDS
+        value: "-123456789,-987654321"  # Ваши группы
+      - key: INTERVAL_HOURS
+        value: "5"
